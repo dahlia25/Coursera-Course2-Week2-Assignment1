@@ -47,7 +47,7 @@ complete <- function(directory, id) {
 ## Testing to see if our function works:
 > complete(airdata, 1)
   id nobs
-  1  117
+1  1  117
 
 > complete(airdata, c(2, 4, 8, 10, 12))
   id nobs
