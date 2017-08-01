@@ -69,7 +69,7 @@ corr <- function(directory, threshold = 0) {
 > cr <- corr(airdata, 5000)
 > summary(cr)
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-##                                                
+[1]                                                
 
 > length(cr)
 [1] 0
