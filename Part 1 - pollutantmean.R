@@ -1,12 +1,12 @@
-Part 1:
-Write a function named 'pollutantmean' that calculates the mean of a pollutant (sulfate or nitrate) across a specified list of monitors. 
-The function 'pollutantmean' takes three arguments: 'directory', 'pollutant', and 'id'. 
+# Part 1: 
+# Write a function named 'pollutantmean' that calculates the mean of a pollutant (sulfate or nitrate) across a specified list of monitors. 
+# The function 'pollutantmean' takes three arguments: 'directory', 'pollutant', and 'id'. 
         
-Given a vector monitor ID numbers, 'pollutantmean' reads that monitors' particulate matter data from the directory specified in the 
-'directory' argument and returns the mean of the pollutant across all of the monitors, ignoring any missing values coded as NA.
+# Given a vector monitor ID numbers, 'pollutantmean' reads that monitors' particulate matter data from the directory specified in the 
+# 'directory' argument and returns the mean of the pollutant across all of the monitors, ignoring any missing values coded as NA.
 
 
-My Solution: although the structure of my code differs slightly from the assignment's prototype function example, it runs perfectly fine.
+# My Solution: although the structure of my code differs slightly from the assignment's prototype function example, it runs perfectly fine.
 
 ## Create a function that can combine all .csv files in "specdata" folder together into one data frame (using rbind):
 ## Since all columns in each csv file are the same, use rbind to combine the files by rows.
@@ -17,7 +17,7 @@ multmerge <- function(path){
         Reduce(function(x,y) {rbind(x,y)}, datalist)
 }
 
--------------------------------------------------------------------------------------------------
+
 ## Store combined data into "combined_data" variable:
 
 combined_data <- multmerge("C:/.../")           ## insert "path" to your specdata file here
@@ -27,7 +27,7 @@ combined_data <- multmerge("C:/.../")           ## insert "path" to your specdat
 
 airdata <- na.omit(combined_data)
 
--------------------------------------------------------------------------------------------------
+
 ## Create function pollutantmean:
 
 pollutantmean <- function(directory, pollutant, id1, id2) {
@@ -47,7 +47,7 @@ pollutantmean <- function(directory, pollutant, id1, id2) {
         result
 }
 
--------------------------------------------------------------------------------------------------
+
 ## Testing our function to see if it works:
 
 > pollutantmean(airdata, "sulfate", 1, 10)
