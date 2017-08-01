@@ -18,7 +18,7 @@ multmerge <- function(path){
 }
 
 
-## Store combined data into "combined_data" variable:
+## Store combined data into "combined_data":
 
 combined_data <- multmerge("C:/.../")           ## insert "path" to your specdata file here
 
